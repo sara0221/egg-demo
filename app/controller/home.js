@@ -2,15 +2,12 @@
 
 const Controller = require('egg').Controller;
 
+// 严选首页同步mock数据
+const indexMock = require('../mock/yx/index.js')
+
 class HomeController extends Controller {
   async index() {
-    const dataList = {
-      list: [
-        { id: 1, title: 'this is news 1', url: '/news/1' },
-        { id: 2, title: 'this is news 2', url: '/news/2' }
-      ]
-    };
-    await this.ctx.render('yx/index.tpl', dataList);
+    await this.ctx.render('yx/index.tpl', indexMock);
   }
 }
 

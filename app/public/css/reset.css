@@ -1,0 +1,25 @@
+html,
+body {
+    margin: 0;
+    font-family: "Heiti SC", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", verdana;
+    font-size: 12px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
