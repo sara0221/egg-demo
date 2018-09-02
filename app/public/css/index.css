@@ -114,8 +114,14 @@
 .right-ul-li-div ul li:last-child{
     border-bottom:none;
 }
+.right-ul-li-div{
+    display: none;
+}
 .drop-down-menu-li:hover .icon-upArrow{
     transform: rotateX(180deg);
+}
+.drop-down-menu-li:hover .right-ul-li-div{
+    display: block;
 }
 
 .icon-arrow-up {
@@ -170,6 +176,12 @@
     bottom: 42px;
     left: 0;
 }
+.header-notice-wrap {
+    position: relative ;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
 .nav-top{
     float: left;
     margin-top: 40px;
@@ -193,19 +205,85 @@
     margin-left: -20px;
     margin-right: 20px;  
 }
+.nav-top-border{
+    position: relative;
+}
+.yx-dropMenu-ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.yx-dropMenu{
+    position: absolute;
+    display: none;
+    left: 10px;
+}
 
-.nav-top-first-li{
-    color: #b4a078;
-    border-bottom: 3px solid #b4a078;
+/* slider部分 */
+.m-focus{
+    position: relative;
+}
+
+.slick-prev{
+    display: block;
+    left: 58px;
+    position: absolute;
+    z-index: 9;
+    top:420px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 80;
+    background-color: #D0C4AF;
+    background-image: url(http://yanxuan-static.nosdn.127.net/hxm/yanxuan-web/p/20150730/style/img/x1/icon-normal-sdf26262b15-838efcb5f5.png);
+    background-repeat: no-repeat;
+    background-position: 0 -4936px;
+    border-radius: 500px;
+}
+.slick-next{
+    display:block;
+    right:156.5px;
+    position: absolute;
+    z-index: 9;
+    top: 420px;
+    width: 50px;
+    height: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 80;
+    background-color: #D0C4AF;
+    background-image: url(http://yanxuan-static.nosdn.127.net/hxm/yanxuan-web/p/20150730/style/img/x1/icon-normal-sdf26262b15-838efcb5f5.png);
+    background-repeat: no-repeat;
+    background-position: 0 -5116px;
+    border-radius: 500px;
 
 }
-.nav-top-first-li a:visited{
-    color: #b4a078;
+.slick-dots{
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    padding:0;
+    list-style: none;
+    text-align: center;
+    margin:0;
 }
-
-
-.header-notice-wrap {
-    position: relative ;
-    margin-left: 20px;
-    transition: all 0.3s ease-in-out;
+.slick-dots-li{
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin:0 8px 10px;
+    padding:0;
+    cursor:pointer;
+}
+.slick-dots-li button{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 500px;
+    cursor: pointer;
+    color: transparent;
+    border:1px solid #cecece;
+    background:#fff;
 }
