@@ -27,13 +27,12 @@
     margin-left: 10px;
     background:url(http://yanxuan.nosdn.127.net/d132c2561f18f1149d566a60d05fd9b7.gif) center left no-repeat ;
 }
-/* #yanxuan-notice-ul{
+#yanxuan-notice-ul{
     position: relative ;
-    top: -10px;
     margin-left: 20px;
     transform:translateY(-0px);
     transition:all 0.1s ease;
-} */
+}
 .header-left-info ul li a {
     color: #b4a078;
     text-decoration: underline;
@@ -94,7 +93,7 @@
     position: absolute;
     border: 1px solid #ddd;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
-    top: 21px;
+    top: 22px;
     
 }
 .right-ul-li-div{
@@ -146,13 +145,10 @@
 }
 
 /* 搜索框 */
-
-
 .nav-header-inner {
     width: 1090px;
     margin: 0 auto;
     height: 204px;
-    outline: 1px solid red;
     text-align: right;
     position: relative;
     
@@ -163,7 +159,7 @@
     height: 60px;
     width: 180px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .yx-cartEnter-icon{
@@ -182,9 +178,41 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* 搜索栏的设置 */
+.yx-search{
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    
+}
+.yx-search .yx-searchInput{
+    height: 22px;
+    border: 0;
+    border-bottom: 1px solid #D8cEBC;
+    line-height: 22px;
+    font-size: 12px;
+    width: 252px;
+    outline: none;
+}
+.yx-searchDefaultKeyword{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: #999;
+    line-height: 1;
+    cursor: text;
+    touch-action: none;
+    pointer-events:none;
+    white-space:nowrap;
+    overflow: hidden;
+    width: 230px;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
 .nav-top{
     float: left;
-    margin-top: 40px;
+    margin-top: 20px;
     
 }
 
@@ -219,32 +247,54 @@
 }
 
 /* slider部分 */
-.m-focus{
+.m-focusSlick{
     position: relative;
+    width: 100%;
+    height:420px;
+    overflow: hidden;
+    
+}
+.slick-list{
+    position: absolute;
+    width: 1920px;
+    min-width: 1090px;
+    z-index: 1;
 }
 
+.imgCenterBanner {
+    position: relative;
+    width: 10000000px;
+    
+   
+}
+.imgCenterBanner a{
+    float:left;
+    width:1920px;
+}
 .slick-prev{
     display: block;
     left: 58px;
     position: absolute;
-    z-index: 9;
-    top:420px;
+    z-index: 2;
+    top:210px;
     width: 50px;
     height: 50px;
     cursor: pointer;
     opacity: 80;
-    background-color: #D0C4AF;
+    background-color:#D0C4AF;
     background-image: url(http://yanxuan-static.nosdn.127.net/hxm/yanxuan-web/p/20150730/style/img/x1/icon-normal-sdf26262b15-838efcb5f5.png);
     background-repeat: no-repeat;
     background-position: 0 -4936px;
     border-radius: 500px;
+    outline: none;
+    border: none;
 }
 .slick-next{
     display:block;
     right:156.5px;
     position: absolute;
-    z-index: 9;
-    top: 420px;
+    z-index: 2;
+    top: 210px;
     width: 50px;
     height: 50px;
     height: 50px;
@@ -255,35 +305,48 @@
     background-repeat: no-repeat;
     background-position: 0 -5116px;
     border-radius: 500px;
-
+    outline: none;
+    border: none;
 }
 .slick-dots{
     position: absolute;
-    bottom: 4px;
+    bottom: 0px;
     width: 100%;
+    height: 40px;
     padding:0;
     list-style: none;
     text-align: center;
     margin:0;
+    z-index: 3;
+    color: red;
 }
-.slick-dots-li{
-    position: relative;
+.slick-dots span{
+    margin-left: 5px;
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin:0 8px 10px;
-    padding:0;
-    cursor:pointer;
-}
-.slick-dots-li button{
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 8px;
-    height: 8px;
     border-radius: 500px;
-    cursor: pointer;
+    background-color: #fff;
+    text-align: center;
     color: transparent;
-    border:1px solid #cecece;
-    background:#fff;
+    cursor: pointer;
+    border: 1px solid #cecece;
 }
+.slick-dots span.slick-active{
+    box-shadow: 0 0 0 4px #dfcead;
+    background-color:#a7936e;
+    border-radius:500px;
+    border:none;
+}
+
+.icon-yxtop-search{
+    position: absolute;
+    right: 40px;
+    top:70px;
+    display: block;
+    background-position: 0 -291px;
+    height: 20px;
+    width: 20px;
+    background-image: -webkit-image-set(url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-component/p/20170601/style/img/x1/icon-yxtop-s7be3ef1526-1833a17ef7.png) 1x,url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-component/p/20170601/style/img/x2/icon-yxtop-s1a74fe310b-89c6ae28ad.png) 2x);
+}
+

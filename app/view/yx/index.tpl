@@ -16,7 +16,7 @@
                         <a href="http://you.163.com/story">好的生活，没那么贵</a>
                     </div>
                     <div class="header-left-info">
-                        <ul id="yanxuan-notice-ul" class="header-notice-wrap">
+                        <ul id="yanxuan-notice-ul" class="header-notice-wrap" style="top:-10px;">
                             {% for item in notice %}
                             <li class="notice-list-item" style="line-height:30px;">
                                 <a class="notice-link" href="{{item.link}}">{{item.text}}</a>
@@ -104,57 +104,48 @@
                     <li class="yx-tabNav-item"><a>为你严选</a></li>
                     <li class="yx-tabNav-item"><a>众筹</a></li>
                 </ul>
-
+                <div class="yx-search">
+                    <input type="text" class="yx-searchInput"></input>
+                    <div class="yx-searchDefaultKeyword">明星产品 智能马桶盖 直降240元</div>
+                </div>
+                <div class="yx-searchButton">
+                    <i class="yx-icon-yxtop icon-yxtop-search"></i>
+                </div>
             </div>
         </div>
     </div>
     <div class="g-bd">
         <div class="js-slick m-focusSlick">
-            <button type="button" class="slick-prev icon-normal-slick-leftRound"></button>
+            
             <div class="slick-list draggable">
-                <div class="slick-track">
-                    <div class="item imgCenterBanner">
-                        <a href="" class="wrap" >
-                            <img src="https://yanxuan.nosdn.127.net/c2f7f36ff35bfcb7cc1730a05f18cdde.JPG?imageView&quality=95&thumbnail=1920x420">
-                        </a>
-                    </div>
-                </div>
+                <div class="imgCenterBanner" style="left:0px;">
+                    {%for item in imgsCount%}
+                    <a href="{{item.url}}">
+                        <img src="{{item.link}}">
+                    </a>          
+                {% endfor %}
+                 </div>
             </div>
+            <button type="button" class="slick-prev icon-normal-slick-leftRound"></button>
             <button type="button" class="slick-next icon-normal-slick-rightRound"></button>
-            <ul class="slick-dots" >
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-                <li class="slick-dots-li" id="slick-slide00">
-                    <button type="button" >
-                    </button>
-                </li>
-            </ul>
+            <div class="slick-dots" >
+                <span class="slick-active" id="">1
+                </span>
+                <span class="" id="">2
+                </span>
+                <span class="" id="">3
+                </span>
+                <span class="" id="">4
+                </span>
+                <span class="" id="">5
+                </span>
+                <span class="" id="">6
+                </span>
+                <span class="" id="">7
+                </span>
+                <span class="" id="">8
+                </span>
+            </div>
         </div>
     </div>
     <script src="/public/js/index.js"></script>

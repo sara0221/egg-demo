@@ -357,5 +357,44 @@ module.exports = {
             text: '',
             link: ''
         }]
+    }],
+    imgsCount:[{
+        alt: 'img1',
+        link:'https://yanxuan.nosdn.127.net/9c1c9faa33500244e383f909d3208474.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img2',
+        link:'https://yanxuan.nosdn.127.net/7e03800ec8df216f0eaaae649b88a650.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img3',
+        link:'https://yanxuan.nosdn.127.net/e0f9051e1c408572ba1183dab48a32a0.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img4',
+        link:'https://yanxuan.nosdn.127.net/27304c27c573b4ffeaa9bb7c5a67e655.jpg?imageView&quality=95&thumbnail=1920x420'
+    },
+    {
+        alt: 'img5',
+        link:'https://yanxuan.nosdn.127.net/75832a146d3a6c32cab561bbcca9ef9b.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img6',
+        link:'https://yanxuan.nosdn.127.net/a591df9eca4fde3c5d5c413fb8d57e84.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img7',
+        link:'https://yanxuan.nosdn.127.net/9c1c9faa33500244e383f909d3208474.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
+    },
+    {
+        alt: 'img8',
+        link:'https://yanxuan.nosdn.127.net/f9716311d6dd169b17a597fb6d2222b9.jpg?imageView&quality=95&thumbnail=1920x420',
+        url: 'http://www.youku.com'
     }]
 }
