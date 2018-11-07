@@ -165,6 +165,7 @@
                 </span>
             </div>
         </div>
+
         <div class="m-manufacturer g-row">
             <div class="m-commonHeader">
                 <div class="f-left lh1">
@@ -224,6 +225,7 @@
                 </div>
             </div>
         </div>
+
         <div class="m-newProducts g-row">
             <div class="m-commonHeader">
                 <div class="f-left lh1">
@@ -285,6 +287,7 @@
             </div>
             <div class="f-hide j-addNewItemList"></div>
         </div>
+
         <div class="m-indexPopularItem">
             <div class="g-row" >
                 <div class="m-commonHeader">
@@ -351,6 +354,7 @@
                 </div>
             </div>
         </div>
+
         <div id="flashSaleContainer">
             <div class="m-flashSale">
                 <div class="g-row">
@@ -413,6 +417,7 @@
                 </div>
             </div>
         </div>
+
         <div class="m-saleCenter">
             <div class="g-row">
                 <div class="m-commonHeader">
@@ -430,16 +435,34 @@
                         <div class="m-focus">
                             <div class="focus-bd">
                                 <div class="js-slick m-focusSlick slick-initialized slick-slider slick-dotted">
+                                    <button type="button" class="slick-prev icon-normal-slick-leftRound w-icon-normal slick-arrow"></button>
                                     <div class="slick-list draggable">
-                                        <div class="slick-track">
-                                            <div class="item normal slick-slide">
-                                                <a href="" class="wrap">
-                                                    <img src="https://yanxuan.nosdn.127.net/2dff1fab7c67be8db190f8dec0c40ea8.jpg?imageView&quality=95&thumbnail=224x376">
-                                                </a>
+                                        <div class="slick-track-inner">
+                                            <div class="slick-track" style="left:0px;">
+                                                <div class="item normal slick-slide">
+                                                    <a href="" class="wrap">
+                                                        <img src="https://yanxuan.nosdn.127.net/2dff1fab7c67be8db190f8dec0c40ea8.jpg?imageView&quality=95&thumbnail=224x376">
+                                                    </a>
+                                                </div>
+                                                <div class="item normal slick-slide">
+                                                    <a href="" class="wrap">
+                                                        <img src="https://yanxuan.nosdn.127.net/568781182da7aa7768a356986e27a812.jpg?imageView&quality=95&thumbnail=224x376">
+                                                    </a>
+                                                </div>
+                                                <div class="item normal slick-slide">
+                                                    <a href="" class="wrap">
+                                                        <img src="https://yanxuan.nosdn.127.net/2dff1fab7c67be8db190f8dec0c40ea8.jpg?imageView&quality=95&thumbnail=224x376">
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="item normal slick-slide"></div>
                                         </div>
                                     </div>
+                                    <button type="button" class="slick-next icon-normal-slick-rightRound w-icon-normal slick-arrow"></button>
+                                    <ul class="slick-dots">
+                                        <li id="slick-slide20"><span>1</span></li>
+                                        <li id="slick-slide20"><span>2</span></li>
+                                        <li id="slick-slide20"><span>3</span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -510,90 +533,87 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="m-indexCates">
             {% for item in BigBox %}
-            <div class="g-row">
-                <div class="m-indexCate">
-                    <div class="m-commonHeader">
-                        <div class="f-left lh1">
-                            <a>
-                                <h3 class="name">{{item.nameH3}}</h3>
-                            </a>
-                            <span></span>
-                        </div>
-                        <div class="f-right lh1">
-                            <div class="subCateList">
-                            {% for itemS in item.Names %}
-                            <span>
-                                <b class="spilt">{{itemS.split}}</b>
-                                <a>{{itemS.name}}</a>
-                            </span>
-                            {% endfor %}
+                <div class="g-row">
+                    <div class="m-indexCate">
+                        <div class="m-commonHeader">
+                            <div class="f-left lh1">
+                                <a><h3 class="name">{{item.nameH3}}</h3></a>
+                                <span></span>
                             </div>
-                            <a class="moreItems f-fz14">查看更多 ></a>
-                        </div>
-                    </div>
-                    <div class="banner">
-                        <a class="wrap" targert="_blank" title="热销-{{item.nameH3}}">
-                            <div>
-                                <img class="img img-lazyload j-lazyload img-lazyloaded" src={{item.link}}
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bd">
-                        <ul class="itemList">
-                            {% for itemList in item.itemList %}
-                            <li class="item" >
-                                <div class="m-product">
-                                    <div class="hd">
-                                        <a title={{itemList.title}} targert="_blank" class="imgWrap">
-                                            <div>
-                                                <img class="img img-lazyload j-lazyload img-lazyloaded" src={{itemList.link}}>
-                                            </div>
-                                            {% if itemList.colorNum %}
-                                            <div class="colorNum">{{itemList.colorNum}}</div>
-                                            {% endif %}
-                                        </a>
-                                    </div>
-                                    <div class="bd">
-                                        
-                                        <div class="prdtTags">
-                                            {% if itemList.itemTag %}
-                                            <span class="itemTag">{{itemList.itemTag}}</span>
-                                            {% endif %}
-                                             {% if itemList.itemTag1 %}
-                                            <span class="itemTag">{{itemList.itemTag1}}</span>
-                                            {% endif %}
-                                             {% if itemList.itemTag2 %}
-                                            <span class="itemTag2">{{itemList.itemTag}}</span>
-                                            {% endif %}
-                                        </div>
-                                        
-                                        <h4 class="name">
-                                            <a title={{itemList.title}} targert="_blank">
-                                                <span>{{itemList.title}}</span>
-                                            </a>
-                                        </h4>
-                                        <p class="price">
-                                            <span class="retailPrice">
-                                            <span>¥</span>
-                                            <span>{{itemList.retailPrice}}</span>
-                                            </span>
-                                            {% if itemList.counterPrice %}
-                                            <span class="counterPrice">¥ {{itemList.counterPrice}}</span>
-                                            {% endif %}
-                                        </p>
-                                    </div>
+                            <div class="f-right lh1">
+                                <div class="subCateList">
+                                {% for itemS in item.Names %}
+                                    <span>
+                                        <b class="spilt">{{itemS.split}}</b>
+                                        <a>{{itemS.name}}</a>
+                                    </span>
+                                {% endfor %}
                                 </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
+                                <a class="moreItems f-fz14">查看更多 ></a>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <a class="wrap" targert="_blank" title="热销-{{item.nameH3}}">
+                                <div>
+                                    <img class="img img-lazyload j-lazyload img-lazyloaded" src={{item.link}}>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="bd">
+                            <ul class="itemList">
+                                {% for itemList in item.itemList %}
+                                    <li class="item" >
+                                        <div class="m-product">
+                                            <div class="hd">
+                                                 <a title={{itemList.title}} targert="_blank" class="imgWrap">
+                                                    <div>
+                                                        <img class="img img-lazyload j-lazyload img-lazyloaded" src={{itemList.link}}>
+                                                    </div>
+                                                    {% if itemList.colorNum %}
+                                                    <div class="colorNum">{{itemList.colorNum}}</div>
+                                                    {% endif %}
+                                                </a>
+                                            </div>
+                                            <div class="bd">
+                                                <div class="prdtTags">
+                                                    {% if itemList.itemTag %}
+                                                    <span class="itemTag">{{itemList.itemTag}}</span>
+                                                    {% endif %}
+                                                    {% if itemList.itemTag1 %}
+                                                    <span class="itemTag">{{itemList.itemTag1}}</span>
+                                                    {% endif %}
+                                                    {% if itemList.itemTag2 %}
+                                                     <span class="itemTag2">{{itemList.itemTag}}</span>
+                                                    {% endif %}
+                                                </div>
+                                                <h4 class="name">
+                                                    <a title={{itemList.title}} targert="_blank">
+                                                        <span>{{itemList.title}}</span>
+                                                    </a>
+                                                </h4>
+                                                <p class="price">
+                                                    <span class="retailPrice">
+                                                        <span>¥</span>
+                                                        <span>{{itemList.retailPrice}}</span>
+                                                    </span>
+                                                    {% if itemList.counterPrice %}
+                                                    <span class="counterPrice">¥ {{itemList.counterPrice}}</span>
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
+
         <div class="m-expert g-row">
             <div class="m-commonHeader">
                 <div class="f-left lh1">
@@ -604,10 +624,85 @@
                     <a targert="_blank" class="moreItems f-fz14"></a>
                 </div>
             </div>
-            <div class="bd"></div>
+            <div class="bd">
+                <div class="expertContent">
+                    <a class="expert first large" targert="_blank" >
+                        <div>
+                            <img class="img img-lazyload j-lazyload img-lazyloaded" src="https://yanxuan.nosdn.127.net/b21b20f34d5007f961c182273a5d429f.jpg?imageView&quality=95&thumbnail=690y380">
+                        </div>
+                    </a>
+                    <a class="expert small" targert="_blank" >
+                        <div>
+                            <img class=="img img-lazyload j-lazyload img-lazyloaded" src="https://yanxuan.nosdn.127.net/9548e1f1a0ba0436cb13d586c50284be.jpg?imageView&quality=95&thumbnail=390y185" >
+                        </div>
+                    </a>
+                    <a class="expert small last" targert="_blank" >
+                        <div>
+                            <img class=="img img-lazyload j-lazyload img-lazyloaded" src="https://yanxuan.nosdn.127.net/4a56bf536141eb2ad84f8f8f0e0418ab.jpg?imageView&quality=95&thumbnail=390y185" >
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        
-    </div>
+    
+        <div class="m-indexComment indexComment">
+            <div class="g-row">
+                <div class="m-commonHeader">
+                    <div class="f-left lh1">
+                        <h3 class="name">大家都在说</h3>
+                        <small class="frontName f-fz14">生活，没有统一标准</small>
+                    </div>
+                    <div class="f-right lh1">
+                        <a targert="_blank" class="moreItems f-fz14"></a>
+                    </div>
+                </div>
+                <div class="bd slickWidth">
+                    <ul class="itemList">
+                        <div id="js-CommentSlick" class="js-CommentSlick commentSlick slick-initialized slick-slider">
+                            <button type="button" class="slick-prev icon-normal-slick-leftRound w-icon-normal slick-arrow"></button>
+                            <div class="slick-list draggable">
+                                <div class="slick-track">
+                                    {% for item in indexComment %}
+                                        <li class="item slick-slide slick-cloned">
+                                            <div class="m-product">
+                                                <div class="hd">
+                                                    <a title={{item.title}} targert="_blank">
+                                                        <div >
+                                                            <img class="img img-lazyload img-lazyloaded" src={{item.link}} alt={{item.title}}>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="bd bd_comment">
+                                                    <div class="m-comment">
+                                                        <div class="bd_top">
+                                                            <span class="fontname">{{item.fontname}}</span>
+                                                            <span class="date">{{item.date}}</span>
+                                                        </div>
+                                                        <div class="bd_middle">
+                                                            <span class="pname" title={{item.title}}>{{item.title}}</span>
+                                                            <span class="price">
+                                                                <span>¥</span>
+                                                                <span>{{item.Price}}</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <p data-content={{item.dateContent}}>{{item.dateContent}}</p>
+                                                            <s class="more"></s>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </div>  
+                            </div>
+                            <button type="button" class="slick-next icon-normal-slick-rightRound w-icon-normal slick-arrow"></button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
     <script src="/public/js/index.js"></script>
 </body>
 

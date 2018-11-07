@@ -266,6 +266,7 @@
     fnTimeCountDown(d,obj)
 })();
 
+// 新品首发的轮播图
 (function(){
     var prev=document.querySelector(".m-newProducts .slick-prev")
     var next=document.querySelector(".m-newProducts .slick-next")
@@ -273,6 +274,50 @@
     var width=parseInt(window.getComputedStyle(slick_track_inner).getPropertyValue("width"))
     var slick_track=document.querySelector(".slick-track")
     var len=document.querySelectorAll(".m-newProducts .slick-list   .m-product").length
+
+    next.addEventListener("click", next_pic)
+    
+    prev.onclick=function(){
+        prev_pic()
+    }
+    function next_pic(){
+        var newLeft=parseInt(slick_track.style.left)-width
+        if(newLeft <= (- width*(len/4-1))){
+            newLeft= - width*(len/4-1)
+            next.style.backgroundColor="#E7E2D7"
+        }else{
+            next.style.backgroundColor="#D0C4AF"
+        }          
+        slick_track.style.left=newLeft+"px"
+        
+    }
+
+    function prev_pic(){
+        var newLeft=parseInt(slick_track.style.left)+width
+        if(newLeft >= 0){
+            newLeft = 0
+            prev.style.backgroundColor="#E7E2D7"
+        }else{
+           
+            prev.style.backgroundColor="#D0C4AF"
+        }
+        slick_track.style.left=newLeft+"px"
+      
+        }
+})();
+
+// 福利社轮播图
+(function() {
+    var slick_track=document.querySelector(".m-saleCenter .slick-track")
+    var itemWidth=document.querySelector(".m-saleCenter .slick-slide")
+    var slick_list=document.querySelector(".m-saleCenter .slick-list")
+    var width=parseInt(window.getComputedStyle(itemWidth).getPropertyValue("width"))
+    var len=document.querySelectorAll(".m-saleCenter .slick-track .item").length
+    var prev=document.querySelector(".m-saleCenter .slick-prev")
+    var next=document.querySelector(".m-saleCenter .slick-next")
+    
+    var item=document.querySelectorAll(".m-saleCenter .slick-dots li span")
+    //点击前后幻灯
     next.onclick=function(){
         next_pic()
     }
@@ -282,27 +327,58 @@
     }
     function next_pic(){
         var newLeft=parseInt(slick_track.style.left)-width
-        if(newLeft<(- width*(len/4-1))){
-            if(newLeft==-1090){
-
-                next.style.backgroundColor="#E7E2D7"
-            }
-        }else{
-            if(newLeft==-1355){
-                newLeft=265
-            }
-        }                
-        slick_track.style.left=newLeft+"px"
-    }
-
-    function prev_pic(){
-        var newLeft=parseInt(slick_track.style.left)+width
-        if(newLeft>0){
-            newLeft= - width*(len/4-1)
-        }
-        else{
+        if(newLeft<(- width*(len-1))){
             newLeft=0
         }
         slick_track.style.left=newLeft+"px"
+        index++
+        if(index> len-1){
+            index=0
         }
-})()
+        ShowCurrentDot()
+    }
+    
+    function prev_pic(){
+        var newLeft=parseInt(slick_track.style.left)+width
+        if(newLeft>0){
+            newLeft= - width*(len-1)
+        }
+        slick_track.style.left=newLeft+ "px"
+        index--
+        if(index<0){
+            index=len-1
+        }
+        ShowCurrentDot()
+    }
+    //自动播放
+    var timer=null
+    function autoPlay(){
+        timer=setInterval(function(){
+            next_pic()
+        },3000)
+    }
+    autoPlay()
+    slick_list.onmouseenter=function(){
+        clearInterval(timer)
+    }
+    slick_list.onmouseleave=function(){
+        autoPlay()
+    }
+    
+    var index=0
+    ShowCurrentDot()
+    function ShowCurrentDot(){
+        for(let i=0,len=item.length;i<len;i++){
+            item[i].className=""
+        }
+        item[index].className="slick-active"
+    }
+    
+    for(let i =0,len=item.length;i<len;i++){
+            item[i].onclick=function(){
+                slick_track.style.left= i*(-width)+"px"
+                index=i
+                ShowCurrentDot()
+            }    
+    }
+})();

@@ -635,7 +635,7 @@ module.exports = {
         }
         ,
         {
-            number:1,
+            number:2,
             title:"今日APP价",
             searchAll:"全部",
             ModuleBd:[
@@ -763,7 +763,8 @@ module.exports = {
                 title:"切尔西牛皮敲花女靴",
                 link:"https://yanxuan.nosdn.127.net/20730762db9507fc0720071df2dcaaee.png?quality=95&thumbnail=265x265&imageView",
                 itemTag:"APP特惠",
-                counterPrice:429
+                counterPrice:429,
+                retailPrice:199
             },
             {
                 title:"日式和风条纹男女家居拖鞋",
@@ -826,8 +827,7 @@ module.exports = {
             {
                 title:"女式速暖双层加厚保暖内衣套装（上衣+裤）",
                 link:"https://yanxuan.nosdn.127.net/48053a64e3a217461123cace8831860a.png?quality=95&thumbnail=265x265&imageView",
-                
-                counterPrice:259
+                retailPrice:259
             },
             {
                 title:"100%羊毛 男式经典美利奴V领羊毛衫",
@@ -883,7 +883,7 @@ module.exports = {
             },
             {
                 title:"网易智造X3 Plus蓝牙HiFi耳机",
-                link:"hhttps://yanxuan.nosdn.127.net/ccdbdc82bdc8929723e4941a93f85550.png?quality=95&thumbnail=265x265&imageView",
+                link:" https://yanxuan.nosdn.127.net/ccdbdc82bdc8929723e4941a93f85550.png?quality=95&thumbnail=265x265&imageView",
                 itemTag:"爆品",
                 retailPrice:199
             },
@@ -934,7 +934,7 @@ module.exports = {
             {
                 title:"阿瓦提长绒棉超柔毛巾",
                 link:"https://yanxuan.nosdn.127.net/d3571a8e36904b030b24d7c44e36c88e.png?quality=95&thumbnail=265x265&imageView",
-                counterPrice:23,
+                retailPrice:23,
                 colorNum:"2色可选"
             },
             {
@@ -1055,7 +1055,7 @@ module.exports = {
             {
                 title:"德式轻量保温杯",
                 link:"https://yanxuan.nosdn.127.net/02da8bce2fa3a182d398f6a09e8ac2f5.png?quality=95&thumbnail=265x265&imageView",
-                counterPrice:119,
+                retailPrice:119,
                 colorNum:"4色可选"
             },
             {
@@ -1113,7 +1113,7 @@ module.exports = {
             {
                 title:"可调节腰围.简约梭织水洗小童长裤",
                 link:"https://yanxuan.nosdn.127.net/0b96febf2f06ca90cede71da19a24daf.png?quality=95&thumbnail=265x265&imageView",
-                counterPrice:99,
+                retailPrice:99,
                 colorNum:"2色可选"
             },
             {
@@ -1169,7 +1169,7 @@ module.exports = {
             {
                 title:"头层牛皮卡包 网易游戏",
                 link:"https://yanxuan.nosdn.127.net/ab983f5a0ecb53b9cea3f4ad7c9eeb88.png?quality=95&thumbnail=265x265&imageView",
-                counterPrice:89
+                retailPrice:89
             },
             {
                 title:"弹性透气护膝",
@@ -1246,5 +1246,36 @@ module.exports = {
             }
         ]
         }
-    ]
+    ],
+    indexComment:[{
+        title:"Yessing女式百搭加绒保暖针织裤",
+        link:"https://yanxuan.nosdn.127.net/c019122e0e2caa96d6caf3bf109ce92c.jpg?imageView&quality=95&thumbnail=355x355",
+        fontname:"M***8",
+        date:"2018-2-3",
+        Price:599,
+        dateContent:"真的超级舒服，每次躺在上面刷剧，看书或者打游戏都超级爽啊。"
+
+    },{
+        title:"Yessing女式百搭加绒保暖针织裤",
+        link:"https://yanxuan.nosdn.127.net/df02132f29cf0a378f8991d3cb0b3c4e.jpg?imageView&quality=95&thumbnail=355x355",
+        fontname:"M***8",
+        date:"2018-2-3",
+        Price:599,
+        dateContent:"真的超级舒服，每次躺在上面刷剧，看书或者打游戏都超级爽啊，一直想买来着，虽然同学觉得是浪费."
+
+    },{
+        title:"Yessing女式百搭加绒保暖针织裤",
+        link:"https://yanxuan.nosdn.127.net/fad1b0d5d3c163e9e0e5f9a276af09e5.jpg?imageView&quality=95&thumbnail=355x355",
+        fontname:"M***8",
+        date:"2018-2-3",
+        Price:599,
+        dateContent:"真的超级舒服，每次躺在上面刷剧，看书或者打游戏都超级爽啊，一直想买来着，虽然同学觉得是浪费，而且宿舍的单人床有点放不下它，但是它可坐可躺."
+    },{
+        title:"Yessing女式百搭加绒保暖针织裤",
+        link:"https://yanxuan.nosdn.127.net/fad1b0d5d3c163e9e0e5f9a276af09e5.jpg?imageView&quality=95&thumbnail=355x355",
+        fontname:"M***8",
+        date:"2018-2-3",
+        Price:599,
+        dateContent:"真的超级舒服，每次躺在上面刷剧，看书或者打游戏都超级爽啊，一直想买来着，虽然同学觉得是浪费，而且宿舍的单人床有点放不下它，但是它可坐可躺，整个人到了上面就不想走，以后有自"
+    }]
 }
